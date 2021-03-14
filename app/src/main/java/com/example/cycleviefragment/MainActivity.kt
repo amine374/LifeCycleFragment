@@ -56,11 +56,17 @@ class MainActivity : AppCompatActivity() {
 
     fun repA(view: View)
     {
-
+        val trans = manager.beginTransaction()
+        val fragB = FragB()
+        trans.replace(R.id.fragContainer, fragB, "fragB")
+        trans.commit()
     }
 
     fun repB(view: View)
     {
-
+        val trans = manager.beginTransaction()
+        val fragA = FragA()
+        trans.replace(R.id.fragContainer, fragA, "fragA")
+        trans.commit()
     }
 }

@@ -1,6 +1,8 @@
 package com.example.cycleviefragment
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -20,6 +22,7 @@ class FragB : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    val TAG = "Amine"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +30,7 @@ class FragB : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        Log.i(TAG, "onCreate method")
     }
 
     override fun onCreateView(
@@ -55,5 +59,50 @@ class FragB : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.i(TAG, "onAttach method B")
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        Log.i(TAG, "onActivityCreated method B")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i(TAG, "onStart method B")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i(TAG, "onResume method B")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i(TAG, "onPause method B")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i(TAG, "onStop method B")
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.i(TAG, "onDestroyView method B")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i(TAG, "onDestroy method B")
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.i(TAG, "onDetach method B")
     }
 }
