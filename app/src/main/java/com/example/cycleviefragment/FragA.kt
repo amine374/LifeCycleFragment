@@ -30,6 +30,8 @@ class FragA : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        Log.i(TAG, "onCreate method A")
     }
 
     override fun onCreateView(
@@ -37,6 +39,7 @@ class FragA : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        Log.i(TAG, "onCreateView method A")
         return inflater.inflate(R.layout.fragment_frag_a, container, false)
     }
 
